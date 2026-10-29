@@ -1,0 +1,45 @@
+
+@model FeedbackManagement.Models.Feedback
+
+@{
+    ViewBag.Title = "Feedback Submitted";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="alert alert-success text-center">
+    <h2>Thank You!</h2>
+    <p>Your feedback has been submitted successfully.</p>
+</div>
+
+<h3>Feedback Details</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Subject</th>
+        <td>@Model.Subject</td>
+    </tr>
+    <tr>
+        <th>Rating</th>
+        <td>@Model.Rating</td>
+    </tr>
+    <tr>
+        <th>Comments</th>
+        <td>@Model.Comments</td>
+    </tr>
+</table>
+
+@Html.ActionLink(
+    "Submit Another Feedback",
+    "Index",
+    "Feedback",
+    null,
+    new { @class = "btn btn-primary" }
+)

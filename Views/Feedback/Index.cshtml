@@ -1,0 +1,21 @@
+﻿
+@model FeedbackManagement.Models.Feedback
+
+@{
+    ViewBag.Title = "Submit Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Submit Your Feedback</h3>
+
+<p class="text-muted">
+    Please complete the form below to share your feedback.
+</p>
+
+@Html.Partial("_FeedbackForm", Model)
+
+@section scripts {
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

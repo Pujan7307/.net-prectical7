@@ -1,0 +1,52 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+    <title>Feedback Management</title>
+
+    <link rel="stylesheet"
+          href="~/Content/bootstrap.min.css" />
+
+    <style>
+        body {
+            background: #f4f7fb;
+            padding-top: 25px;
+        }
+
+        .main-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        .page-heading {
+            color: #2457a7;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <h2 class="page-heading text-center">
+            Feedback Management System
+        </h2>
+
+        <hr />
+
+        @RenderBody()
+
+        <hr />
+        <footer class="text-center">
+            <p>&copy; 2026 Feedback Management</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
